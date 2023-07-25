@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  type="text/css" href="css/bank.css">
+    <title>MY BANK</title>
+</head>
+<body>
+    <div class="row">
+    <nav>
+        <h1>Welcome back, <span class="username"> Niyi</span></h1>
+        <img src="logo.png" alt="logo" class="logo">
+        <div class="other-side">
+            <div class="username-login-con">
+        <input type="text" class="user" id="" placeholder="USER">
+        <p id="display-error-user">wrong user!</p>
+    </div>
+    <div class="pin-login-con">
+        <input type="text" class="pin" id="" placeholder="PIN"> <button class="login-btn">&RightArrow;</button>
+        <p id="display-error-pin" >wrong pin!</p>
+    </div>
+</div>
+    </nav>
+</div>
+
+<div class="display-error"><p>Can't login wrong password or pin</p></div>
+<div class="loader">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+</div>
+
+<div class="container">
+    <!-- <div class="headings date">
+    <h2>current balace</h2>
+    <p>as of 5/05/2003</p>
+</div>
+<div class="acc-balance">
+    <p>$10000</p>
+</div> -->
+    <div class="left-side" id="mainLleft">
+        <div class="current-bal">
+        <h2>Current balance</h2>
+        <p>As of 5/05/2003</p>
+    </div>
+        
+        <div class="deposits" id="depositsMoney">
+            <div class="inner-depo">
+                <div class="depo-deposit">8 deposits</div>
+                $1300
+            </div> 
+            
+            <!-- <div class="inner-depo">
+                <div class="depo">8 deposits</div>
+                $1300
+            </div> 
+            <div class="inner-depo">
+                <div class="depo">8 deposits</div>
+                $1300
+            </div>
+            <div class="inner-depo">
+                <div class="depo">8 deposits</div>
+                $1300
+            </div>
+            <div class="inner-depo">
+                <div class="depo">8 deposits</div>
+                $1300
+            </div>
+            <div class="inner-depo">
+                <div class="depo">8 deposits</div>
+                $1300
+            </div>  -->
+        </div>
+
+        <p class="stats">in <span class="in">$5000</span>&nbsp;&nbsp;&nbsp;&nbsp; out <span class="out">$1190</span>&nbsp;&nbsp;&nbsp;&nbsp; interest <span class="interest">$100</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" class="sort">sort&UpArrow;</a></p>
+
+    </div>
+
+    <div class="right-side">
+
+        <p class="total-cash">$1000000</p>
+        
+        <div class="transfer">
+            <p class="topic">transfer money</p>
+            <form action="in">
+            <div class="transfer-funds">
+            <input type="text" class="fund" id="transfer-input-user">
+            
+            <input type="text" class="fund" id="transfer-input"> <button class="submit-transfer-btn">&RightArrow;</button>
+        </div>
+    </form>
+        <div class="subtopic">
+        <label for="">transfer to</label>
+        <label for="">Amount</label>
+    </div>
+        </div>
+        
+        <div class="request">
+            <p class="topic">request money</p>
+            <div class="request-funds">
+            <input type="text" class="fund" id="request-cash"><button class="request-cash-btn">&RightArrow;</button>
+        </div>
+        <div class="subtopic">
+            <label for="">Amount</label>
+            
+        </div>
+        </div>
+        
+        <div class="close-acc">
+            <p class="topic">close account</p>
+            <div class="close-funds">
+            <input type="text" class="fund" id="close-acc-user">
+            <input type="text" class="fund" id="close-acc-pin"> <button class="close-acc-btn">&RightArrow;</button>
+        </div>
+        <div class="subtopic">
+            <label for="">Confirm user</label>
+            <label for="">Confirm pin</label>
+        </div>
+        </div>
+
+        <p class="time">You'll be  logged out in 05:00</p>
+    </div>
+</div>
+<script src="bank.js"></script>
+</body>
+</html>

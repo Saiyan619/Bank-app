@@ -1,0 +1,326 @@
+*{
+    margin: 0;
+    padding:0 ;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+.row{
+    max-width:1000 ;
+    margin: 0 auto;
+     
+ 
+}
+
+.other-side{
+    display: flex;
+}
+#display-error-user{
+    display: none;
+    /* align-items: center;
+    justify-content: center; */
+}
+#display-error-pin{
+    display: none;
+}
+
+.display-error{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 20px;
+}
+
+.loader {
+    --dim: 3rem;
+    width: var(--dim);
+    height: var(--dim);
+    position: relative;
+    animation: spin988 2s linear infinite;
+    position: absolute;
+    top: 40%;
+    left: 45%;
+    transform: translate(-50%,-50%);
+    /* display: none; */
+  }
+  
+  .loader .circle {
+    --color: #1d1d1d;
+    --dim: 1.2rem;
+    width: var(--dim);
+    height: var(--dim);
+    background-color: var(--color);
+    border-radius: 50%;
+    position: absolute;
+    scale: 0.5;
+  }
+  
+  .loader .circle:nth-child(1) {
+    top: 0;
+    left: 0;
+  }
+  
+  .loader .circle:nth-child(2) {
+    top: 0;
+    right: 0;
+  }
+  
+  .loader .circle:nth-child(3) {
+    bottom: 0;
+    left: 0;
+  }
+  
+  .loader .circle:nth-child(4) {
+    bottom: 0;
+    right: 0;
+  }
+  
+  @keyframes spin988 {
+    0% {
+      transform: scale(1) rotate(0);
+    }
+  
+    20%, 25% {
+      transform: scale(1.3) rotate(90deg);
+    }
+  
+    45%, 50% {
+      transform: scale(1) rotate(180deg);
+    }
+  
+    70%, 75% {
+      transform: scale(1.3) rotate(270deg);
+    }
+  
+    95%, 100% {
+      transform: scale(1) rotate(360deg);
+    }
+  }
+
+.container{
+    opacity: 0;
+    transition: 1s;
+}
+
+body{
+    background-color: rgb(240, 238, 238);
+    font-size: 13px;
+}
+
+nav{
+    padding: 10px 30px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    width: 60px;
+}
+.username{
+    display: none;
+}
+
+input{
+    width: 119px;
+    height: 33px;
+    padding: 15px 40px;
+    border-radius: 100px;
+    border: none;
+    outline: none;
+    /* outline: 1px solid grey; */
+}
+input:hover{
+    width: 119px;
+    height: 33px;
+    padding: 15px 40px;
+    border-radius: 100px;
+    border: none;
+    outline: none;
+    outline: 1px solid grey;
+}
+input::placeholder{
+    color: grey;
+}
+
+.container{
+    padding: 20px 190px 0px;
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    /* opacity: 0; */
+}
+
+.deposits{
+    overflow-y: scroll;
+    max-height: 400px;
+}
+
+.current-bal{
+    margin-bottom: 20px;
+}
+
+h2{
+    font-size: 25px;
+}
+
+.inner-depo{
+    margin-bottom: 2px;
+    display: flex;
+    background-color: white;
+    align-items: center;
+    justify-content: space-between;
+    width: 550px;
+    height: 90px;
+    padding: 10px 10px 10px;
+}
+
+.depo-deposit{
+    background-image: linear-gradient(to top left, #39b385, #9be15d);
+    border-radius: 100px;
+    font-size: 12px;
+    padding: 0px 5px 0px;
+    color: white;
+    text-transform: uppercase;
+}.depo-withdrawal{
+    background-image: linear-gradient(to top left, #b1533c, #e90707);
+    border-radius: 100px;
+    font-size: 12px;
+    padding: 0px 5px 0px;
+    color: white;
+    text-transform: uppercase;
+}
+.in,.interest{
+    color:  #95dd56;
+    font-size: 25px;
+}
+.out{
+    color:  #e52a5a;
+    font-size: 25px;
+}
+
+.stats{
+    text-transform: uppercase;
+}
+
+.sort{
+    text-align: right;
+    text-decoration: none;
+    color: black;
+}
+
+
+
+/* -------------right-part-------------- */
+
+
+.total-cash{
+    font-size: 50px;
+    text-align: right;
+}
+
+.fund{
+    width: 110px;
+    height: 25px;
+    border-radius: 5px;
+    margin-top: 15px;
+    background-color: rgba(255, 255, 255, 0.4);
+    outline: none;
+}
+.fund:hover{
+    width: 110px;
+    height: 25px;
+    border-radius: 5px;
+    margin-top: 15px;
+    background-color: rgba(126, 252, 0, 0.281);
+    outline: none;
+}
+
+.subtopic{
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 120px;
+    margin-left: 30px;
+    
+}
+
+.transfer-funds,.request-funds,.close-funds{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.submit-transfer-btn, .request-cash-btn, .close-acc-btn, .login-btn{
+    background-color: white;
+    padding: 5px;
+    border: none;
+    outline: none;
+     border-radius: 100px;
+     width: 50px;
+}
+
+.transfer,.request{
+    margin-top: 20px;
+    border-radius: 10px;
+    width: 400px;
+    height: 150px;
+    padding: 30px 30px 30px;
+}
+
+.topic{
+    margin-top: 5px;
+    font-size: 20px;
+    text-transform: capitalize;
+}
+
+submit-transfer-btn{
+    width: 40px;
+    padding: 2px 8px;
+    margin-top: 15px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+}
+
+/* .transfer,.request,.close-acc > p{
+    
+} */
+
+.transfer{
+    background-image: linear-gradient(to top left, #ffb003, #ffcb03);
+    /* padding: 30px 30px 30px; */
+   
+}
+
+.request{
+     background-image: linear-gradient(to top left, #39b385, #9be15d);
+    /* padding: 30px 30px 30px; */
+    /* width: 450px;
+    height: 150px; */
+}
+
+.close-acc{
+    background-image: linear-gradient(to top left, #e52a5a, #ff585f);
+    margin-top: 20px;
+    border-radius: 10px;
+    width: 400px;
+    height: 150px;
+    padding: 30px 30px 30px;
+}
+
+.time{
+    text-align: right;
+}
+
+
+
+
+
+
+
