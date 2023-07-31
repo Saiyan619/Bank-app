@@ -3,5 +3,5 @@ Best app for easy and fast transfer
 
 
 
-Click to vist our site
+Click and vist our site
 https://saiyan619.github.io/Bank-app/
