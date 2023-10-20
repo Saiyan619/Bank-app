@@ -1,0 +1,70 @@
+@media screen and (max-width: 800px){
+    nav{
+        display: flex;
+        gap: 50px;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .logo{
+        width: 40px;
+    }
+    .username{
+        display: none;
+    }
+    
+    input{
+        width: 100px;
+        height: 33px;
+        padding: 15px 40px;
+        border-radius: 100px;
+        border: none;
+        outline: none;
+        margin-left: 10px;
+        /* outline: 1px solid grey; */
+    }
+    input:hover{
+        width: 100px;
+        height: 33px;
+        padding: 15px 40px;
+        border-radius: 100px;
+        border: none;
+        outline: none;
+        outline: 1px solid grey;
+        margin-left: 10px;
+    }
+    input::placeholder{
+        color: grey;
+    }
+
+    .pin-login-con{
+        display: flex;
+        gap: 10px;
+    }
+
+
+    .container{
+        padding: 20px 20px 0px;
+        margin-top: 40px;
+        width: 100%;
+        display: grid;
+        place-items: center ;
+        justify-content: space-between;
+        /* opacity: 0; */
+    }
+
+    .deposits{
+        overflow-y: scroll;
+        max-height: 290px;
+    }
+    .inner-depo{
+        margin-bottom: 2px;
+        display: flex;
+        background-color: white;
+        align-items: center;
+        justify-content: space-between;
+        width: 450px;
+        height: 90px;
+        padding: 10px 10px 10px;
+    }
+}

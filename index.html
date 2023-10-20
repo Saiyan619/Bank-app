@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet"  type="text/css" href="css/bank.css">
+    <link rel="stylesheet" type="text/css" href="css/bankQuery.css">
     <title>MY BANK</title>
 </head>
 <body>
@@ -25,7 +26,8 @@
     </nav>
 </div>
 
-<div class="display-error"><p>Can't login wrong password or pin</p></div>
+<div class="display-error"><p>Can't login wrong password or pin</p> <button class="close-option-btn-login">Ok</button></div>
+<div class="display-recieve-error"><p>Loan is too high!!!</p> <button class="close-option-btn">Ok</button></div>
 <div class="loader">
     <div class="circle"></div>
     <div class="circle"></div>
@@ -41,47 +43,13 @@
 <div class="acc-balance">
     <p>$10000</p>
 </div> -->
-    <div class="left-side" id="mainLleft">
-        <div class="current-bal">
-        <h2>Current balance</h2>
-        <p>As of 5/05/2003</p>
-    </div>
-        
-        <div class="deposits" id="depositsMoney">
-            <div class="inner-depo">
-                <div class="depo-deposit">8 deposits</div>
-                $1300
-            </div> 
-            
-            <!-- <div class="inner-depo">
-                <div class="depo">8 deposits</div>
-                $1300
-            </div> 
-            <div class="inner-depo">
-                <div class="depo">8 deposits</div>
-                $1300
-            </div>
-            <div class="inner-depo">
-                <div class="depo">8 deposits</div>
-                $1300
-            </div>
-            <div class="inner-depo">
-                <div class="depo">8 deposits</div>
-                $1300
-            </div>
-            <div class="inner-depo">
-                <div class="depo">8 deposits</div>
-                $1300
-            </div>  -->
-        </div>
-
-        <p class="stats">in <span class="in">$5000</span>&nbsp;&nbsp;&nbsp;&nbsp; out <span class="out">$1190</span>&nbsp;&nbsp;&nbsp;&nbsp; interest <span class="interest">$100</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" class="sort">sort&UpArrow;</a></p>
-
-    </div>
-
+   
     <div class="right-side">
 
+        <div class="money-balance">
+        <p>Total Cash</p>
         <p class="total-cash">$1000000</p>
+    </div>
         
         <div class="transfer">
             <p class="topic">transfer money</p>
@@ -123,6 +91,45 @@
 
         <p class="time">You'll be  logged out in 05:00</p>
     </div>
+
+    <div class="left-side" id="mainLleft">
+        <div class="current-bal">
+        <h2>Current balance</h2>
+        <p>As of 5/05/2003</p>
+    </div>
+        
+        <div class="deposits" id="depositsMoney">
+            <div class="inner-depo">
+                <div class="depo-deposit">8 deposits</div>
+                $1300
+            </div> 
+            
+            <!-- <div class="inner-depo">
+                <div class="depo">8 deposits</div>
+                $1300
+            </div> 
+            <div class="inner-depo">
+                <div class="depo">8 deposits</div>
+                $1300
+            </div>
+            <div class="inner-depo">
+                <div class="depo">8 deposits</div>
+                $1300
+            </div>
+            <div class="inner-depo">
+                <div class="depo">8 deposits</div>
+                $1300
+            </div>
+            <div class="inner-depo">
+                <div class="depo">8 deposits</div>
+                $1300
+            </div>  -->
+        </div>
+
+        <p class="stats">in <span class="in">$5000</span>&nbsp;&nbsp;&nbsp;&nbsp; out <span class="out">$1190</span>&nbsp;&nbsp;&nbsp;&nbsp; interest <span class="interest">$100</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" class="sort">sort&UpArrow;</a></p>
+
+    </div>
+
 </div>
 <script src="bank.js"></script>
 </body>

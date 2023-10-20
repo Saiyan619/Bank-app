@@ -36,6 +36,7 @@ loginInputPin = document.querySelector('.pin');
 loginBtn = document.querySelector('.login-btn');
 let currentAccount;
 let currentAccountPin;
+
 loader = document.querySelector('.loader');
 loader.style.display = 'none';
 displayError = document.querySelector('.display-error');
@@ -48,16 +49,18 @@ loginBtn.addEventListener('click', function (e) {
     currentAccount = accounts.find(account => account.owner === loginInputUserVal && account.pin === Number(loginInputPinVal));
     if (currentAccount && currentAccount.pin === Number(loginInputPinVal)) {
         loader.style.display = 'block';
-        displayError.style.display = 'none'
+        displayError.style.display = 'none';
+        
         setTimeout(function () {
             loader.style.display = 'none';
+            loginInputPinVal = loginInputPin = " ";
             webContainer.style.opacity = '1';
             // console.log(currentAccount.pin);
             displayDeposits(currentAccount.movements);
             displayBalance(currentAccount.movements);
             displayStatistics(currentAccount);
         }, 2000);
-        // loginInputPinVal = loginInputPin = '';
+        
         
     } else {
         loader.style.display = 'block';
@@ -65,6 +68,9 @@ loginBtn.addEventListener('click', function (e) {
             loader.style.display = 'none';
             displayError.style.display = 'block'
         }, 2000);
+        closeErrorbtn.addEventListener('click', function () {
+            displayError.style.display = 'none';
+         }) 
     }
     
     let username = document.querySelector('.username');
@@ -134,7 +140,8 @@ transferBtn.addEventListener('click', function (e) {
         pushCash(recieverAccName.movements, amount);
         displayDeposits(currentAccount.movements);
         displayBalance(currentAccount.movements);
-        displayStatistics(currentAccount);
+            displayStatistics(currentAccount);
+            // transferFundsVal = '';
             // displayError.style.display = 'block'
         }, 2000);
         
@@ -146,6 +153,8 @@ transferBtn.addEventListener('click', function (e) {
 
 let requestBtn = document.querySelector('.request-cash-btn');
 let requestCashInput = document.querySelector('#request-cash');
+let recieveError = document.querySelector('.display-recieve-error');
+
 requestBtn.addEventListener('click', function (e) {
     e.preventDefault();
     let requestCashInputVal = requestCashInput.value;
@@ -161,6 +170,18 @@ requestBtn.addEventListener('click', function (e) {
             displayBalance();
             // displayError.style.display = 'block'
         }, 2000);
+    }
+    else {
+        let closeErrorbtn = document.querySelector('.close-option-btn');
+        loader.style.display = 'block';
+        setTimeout(function () {
+            loader.style.display = 'none';
+            recieveError.style.display = 'block';
+
+        }, 2000);
+        closeErrorbtn.addEventListener('click', function () {
+            recieveError.style.display = 'none';
+         })   
     }
     // console.log(reqAmount);
     // reqAmount = '';
@@ -194,8 +215,12 @@ const displayBalance = function () {
 
 
 
+
+// bug i need to fix (removal of input after clicking the buttons(login,trnafer,recieve etc.))
 // close account is not bad but wanna add close timer(prolly 10s)
 //update date
+//add an api that shows dollars to naira
+//a darkmode(not necessary)
 
 
 

@@ -35,6 +35,30 @@
     transform: translate(-50%,-50%);
     font-size: 20px;
 }
+.display-recieve-error{
+    padding: 20px;
+    text-align: center;
+    background-color: #39b385;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 20px;
+    border-radius: 5px;
+    display: none;
+    transition: 1s;
+    /* box-shadow: ; */
+}
+.close-option-btn{
+    padding: 10px 20px;
+    outline: none;
+    border: none;
+    border-radius: 100px;
+    background-color: #1d1d1d;
+    color: white;
+}
 
 .loader {
     --dim: 3rem;
@@ -153,6 +177,7 @@ input::placeholder{
     margin-top: 40px;
     width: 100%;
     display: flex;
+    gap: 50px;
     justify-content: space-between;
     /* opacity: 0; */
 }
@@ -164,6 +189,14 @@ input::placeholder{
 
 .current-bal{
     margin-bottom: 20px;
+}
+.money-balance{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.money-balance > p:first-child{
+    font-size: medium;
 }
 
 h2{
